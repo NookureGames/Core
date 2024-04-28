@@ -9,9 +9,9 @@ namespace Core.Event {
     private EventManager() {
     }
 
-    private static readonly EventManager Instance = new EventManager();
+    private static readonly EventManager Instance = new();
 
-    Dictionary<Type, List<EventVector>> listeners = new Dictionary<Type, List<EventVector>>();
+    private readonly Dictionary<Type, List<EventVector>> listeners = new();
 
     /// <summary>
     /// Get the EventManager instance
